@@ -1,0 +1,120 @@
+/*@media (min-width: 1200px){*/
+    body{
+        font-size: 15px;
+    }
+    .grid-container {
+        display: grid;
+        grid-template-columns: minmax(100px, 200px) minmax(300px, 40%) minmax(350px, 55%) minmax(100px, 200px);
+        grid-template-rows: minmax(10vh, auto) minmax(80vh, auto) minmax(10vh,auto);
+    }
+    .top-box {
+        background-image: url("../img/bg-pattern-desktop.svg");
+        background-size: 90%;
+        background-repeat: no-repeat;
+        /*background-position: -100px center;*/
+        background-position-x: -150px;
+        background-position-y: center;
+        grid-row: 2;
+        grid-column: 2;
+        border-radius: 0;
+        margin: 0;
+        position: relative;
+        overflow: hidden;
+        border-radius: 30px 0 0 30px;
+        border-right: 1px solid black;
+    }
+    .card__image {
+        width: 100%;
+        height: auto;
+        max-width: 35rem;
+       
+    }
+    .card__image img {
+        position: absolute;
+        top: 15%;
+        width: 100%;
+        height: auto;
+        max-width: 35rem;
+        transform: translateX(-6rem);
+    }
+    .box-card {
+        width: 350px;
+        height: 300px;
+        background-repeat: no-repeat;
+        background-position: -5% center;
+        background-size: contain;
+        position: relative;
+        top: 200px;
+        left: -50px;
+        z-index: 2;
+        display: block;
+    }
+    .bottom-box {
+        z-index: auto;
+        grid-row:  2;
+        grid-column: 3;
+        background-color: white;
+        margin: 0;
+        border-radius: 0 30px 30px 0;       
+    }
+    article > h1 {
+        text-align: left;
+        margin: 80px 0 60px 40px;      
+        font-size: 38px;
+    }
+
+    button.accordion {
+        width: 80%;
+        background-color: white;
+        border: none; 
+        margin-left: 40px;
+        padding: 0;
+        outline: none;
+        text-align: left;
+        font-size: 1.063rem;
+        transition: background-color 0.2s linear;
+    }
+    button.accordion:after {
+        width: 80px;
+        height: 10px;
+        content: "";/*\f150*/
+        float: right;
+        background-image: url("../img/icon-arrow-down.svg");
+        background-repeat: no-repeat;
+        background-position-x: right;
+        transform: scaleY(1);
+    }
+      
+    button.accordion.is-open:after {
+        content: "";
+        width: 80px;
+        height: 10px;
+        float: right;
+        background-image: url("../img/icon-arrow-down.svg");
+        background-repeat: no-repeat;
+        background-position-x: right;
+        transform: scaleY(-1);
+    }
+
+    button.accordion:hover {
+        color:  hsl(14, 88%, 65%);
+        cursor: pointer;
+    }
+   
+    button.accordion.is-open {
+        font-weight: bold;
+    }
+      
+    .accordion-content {
+        width: 80%;
+        color: hsl(240, 6%, 50%);
+        background-color: white;
+        border-bottom: 1px solid hsl(240, 5%, 91%);
+        margin-left: 40px;
+        margin-bottom: 25px;
+        padding-bottom: 10px;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.2s ease-in-out;
+    }
+/*}*/
