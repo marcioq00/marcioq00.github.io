@@ -1,46 +1,20 @@
-function showHiden() {
-    var div = document.querySelector(".faq-hidden");
-    /*div.classList.toogle('faq-hidden');*/
-    if(div.style.display ==="none"){
-        div.style.display = "block";
+
+const accordionBtns = document.querySelectorAll(".accordion");
+
+accordionBtns.forEach((accordion) => {
+  accordion.onclick = function () {
+    this.classList.toggle("is-open");
+
+    let content = this.nextElementSibling;
+    console.log(content);
+
+    if (content.style.maxHeight) {
+      //this is if the accordion is open
+      content.style.maxHeight = null;
     } else {
-        div.style.display = "none";
+      //if the accordion is currently closed
+      content.style.maxHeight = content.scrollHeight + "px";
+      console.log(content.style.maxHeight);
     }
-}
-function showHiden1() {
-    var div = document.querySelector(".faq-hidden1");
-    /*div.classList.toogle('faq-hidden');*/
-    if(div.style.display ==="none"){
-        div.style.display = "block";
-    } else {
-        div.style.display = "none";
-    }
-}
-function showHiden2() {
-    var div = document.querySelector(".faq-hidden2");
-    /*div.classList.toogle('faq-hidden');*/
-    if(div.style.display ==="none"){
-        div.style.display = "block";
-    } else {
-        div.style.display = "none";
-    }
-}
-function showHiden3() {
-    var div = document.querySelector(".faq-hidden3");
-    /*div.classList.toogle('faq-hidden');*/
-    if(div.style.display ==="none"){
-        div.style.display = "block";
-    } else {
-        div.style.display = "none";
-    }
-}
-function showHiden4() {
-    var div = document.querySelector(".faq-hidden4");
-    /*div.classList.toogle('faq-hidden');*/
-    if(div.style.display ==="none"){
-        div.style.display = "block";
-    } else {
-        div.style.display = "none";
-    }
-}
-/*class="faq-answers" */ 
+  };
+});
