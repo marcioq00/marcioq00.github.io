@@ -26,7 +26,6 @@
         background-image: url("../img/bg-pattern-desktop.svg");
         background-size: 100%;
         background-repeat: no-repeat;
-        /*background-position: -100px center;*/
         background-position-x: -250px;
         background-position-y: center;
         grid-row: 2;
