@@ -3,9 +3,14 @@
     box-sizing: border-box;
     font-family: 'Kumbh Sans', sans-serif;
 }
+.box__logo {
+    display: none;
+}
+.test {
+    display: none;
+}
 body {
     background: linear-gradient(180deg, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
-    font-size: 12px;
     margin: 0;
 }
 div.grid-container {
@@ -21,16 +26,17 @@ div.top-box {
     border-radius: 30px 30px 0 0;
     position: relative;
 }
-.test {
-    width: 210px;
-    height: 150px;
+.mobile__logo {
+    width: 210px;/*210px*/
+    height: 150px;/*150px*/
     display: block;
     margin-left: auto;
     margin-right: auto;
     margin-top: -90px;
 }
+
 .test1 {
-    width: 210px;
+    width: 210px;/*210px*/
     height: 150px;
     display: block;
     margin-left: auto;
@@ -71,8 +77,8 @@ button.accordion {
     transition: background-color 0.2s linear;
 }
 button.accordion:after {
-    width: 40px;
-    height: 5px;
+    width: 10px;
+    height: 10px;
     content: "";/*/f150*/
     float: right;
     background-image: url("../img/icon-arrow-down.svg");
@@ -82,9 +88,9 @@ button.accordion:after {
 }
   
 button.accordion.is-open:after {
+    width: 10px;
+    height: 10px;
     content: "";
-    width: 40px;
-    height: 5px;
     float: right;
     background-image: url("../img/icon-arrow-down.svg");
     background-repeat: no-repeat;
@@ -113,12 +119,38 @@ div.accordion-content {
     max-height: 0;
     overflow: hidden;
     transition: max-height 0.2s ease-in-out;
+    font-size: 0.688em;
 }
 
 
 }
 @media (min-width: 700px) and (max-width: 1199px){
-   
+    * {
+        box-sizing: border-box;
+        font-family: 'Kumbh Sans', sans-serif;
+    }
+    .box__logo {
+        display: none;        
+    }
+    .mobile__logo {
+        display: none;
+    }
+    .test{
+        /*position: absolute;
+        top: 15%;
+        width: 100%;
+        height: auto;
+        max-width: 35rem;
+        margin-top: 20px;
+        margin-bottom: 100px;
+        transform: translateX(-6rem);*/
+        display: block;
+        margin-left: -60px;
+        margin-top: 50%;
+        margin-bottom: 50%;
+        width: 100%;
+
+    }
     body{
         font-size: 14px;
         background: linear-gradient(180deg, hsl(273, 75%, 66%), hsl(240, 73%, 65%));
@@ -127,7 +159,7 @@ div.accordion-content {
     .grid-container {
         display: grid;
         grid-template-columns: minmax(40px, 100px) minmax(300px, 40%) minmax(350px, 55%) minmax(40px, 100px);
-        grid-template-rows: minmax(15vh, auto) minmax(70vh, auto) minmax(15vh,auto);
+        grid-template-rows: minmax(15vh, auto) minmax(70vh, auto) minmax(15vh, auto);
     }
     
     .top-box {
@@ -135,8 +167,7 @@ div.accordion-content {
         background-image: url("../img/bg-pattern-desktop.svg");
         background-size: 100%;
         background-repeat: no-repeat;
-        background-position-x: -95px;
-        background-position-y: 130px;
+        background-position: -60px center;
         grid-row: 2;
         grid-column: 2;
         border-radius: 0;
@@ -151,14 +182,14 @@ div.accordion-content {
         height: auto;
         max-width: 25rem;     
     }
-    .card__image img {
+    /*.card__image img {
         position: absolute;
         top: 25%;
         width: 100%;
         height: auto;
         max-width: 35rem;
         transform: translateX(-6rem);
-    }
+    }*/
     .box-card {
         width: 350px;
         height: 300px;
@@ -197,7 +228,7 @@ div.accordion-content {
         transition: background-color 0.2s linear;
     }
     button.accordion:after {
-        width: 70px;
+        width: 40px;
         height: 10px;
         content: "";/*\f150*/
         float: right;
@@ -209,7 +240,7 @@ div.accordion-content {
       
     button.accordion.is-open:after {
         content: "";
-        width: 70px;
+        width: 40px;
         height: 10px;
         float: right;
         background-image: url("../img/icon-arrow-down.svg");
